@@ -251,7 +251,14 @@ def eight(input):
     # Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-    pass
+    string_list = list(inputString)
+    for i in string_list:
+        if i == " ":
+            string_list.remove(i)
+    if char in string_list:
+        return (string_list.index(char)+1)
+    else:
+        return -1
 
 
     # <QUESTION 10>
