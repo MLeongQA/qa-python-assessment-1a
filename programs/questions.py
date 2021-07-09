@@ -159,7 +159,16 @@ def four(arg1):
     # help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
-    pass
+    csv_list = input.split(",")
+    name_index = 0
+    encrypt_index = 2
+    name_list = []
+    while name_index < len(csv_list)-1:
+        if csv_list[encrypt_index] == "False":
+            name_list.append(csv_list[name_index])
+        name_index += 4
+        encrypt_index += 4
+    return list(set(name_list))
 
 
     # <QUESTION 6>
