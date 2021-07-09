@@ -66,8 +66,14 @@ def one(input1, input2):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
-    pass
+    index1 = (input.lower()).find("bert")
+    index2 = (input.lower()).find("bert", index1+1)
 
+    if index2 == -1:
+        return ""
+    else:
+        result = input[index1+4:index2]
+        return result 
 
     # <QUESTION 3>
 
