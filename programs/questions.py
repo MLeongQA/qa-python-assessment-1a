@@ -169,13 +169,14 @@ def five(input):
     name_index = 0
     encrypt_index = 2
     name_list = []
+    dupes = set()
     while name_index < len(csv_list)-1:
-        if csv_list[encrypt_index] == "False":
+        if csv_list[encrypt_index] == "False" and csv_list[name_index] not in dupes:
             name_list.append(csv_list[name_index])
+            dupes.add(csv_list[name_index])
         name_index += 4
         encrypt_index += 4
-    return list(set(name_list))
-
+    return name_list
 
     # <QUESTION 6>
 
