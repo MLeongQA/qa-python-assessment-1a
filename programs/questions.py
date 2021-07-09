@@ -198,7 +198,12 @@ def six(input):
     # How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    pass
+    word_list = list(input.lower())
+    vowel_count = 0
+    for i in word_list:
+        if i in ["a", "e", "i", "o", "u"]:
+            vowel_count += 1
+    return vowel_count
 
 
     # <QUESTION 8>
@@ -217,8 +222,15 @@ def seven(input):
     # You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def eight(input):
-    pass
-
+    if input == 1:
+        number_list = [1]
+    else:
+        number_list = list(range(1, input+1))
+    print(number_list)
+    total_product = 1
+    for numbers in number_list:
+        total_product *= numbers
+    return total_product 
 
     # <QUESTION 9>
 
