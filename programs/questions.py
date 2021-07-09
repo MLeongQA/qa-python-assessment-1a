@@ -35,7 +35,12 @@
     # What was the name of the function we have seen to check the length of a container?  Use your CLI to access the Python documentation and get help(len).
 
 def one(input1, input2):
-    pass
+    if len(input1) > len(input2):
+        return input1
+    elif len(input1) < len(input2):
+        return input2
+    else:
+        return input1 + " " + input2
 
 
     # <QUESTION 2>
@@ -84,7 +89,15 @@ def two(input):
     # No Hints for this question
 
 def three(arg1):
-    pass
+    if arg1 %3 == 0:
+        if arg1 %5 == 0:
+            return "fizzbuzz"
+        else:
+            return "fizz"
+    elif arg1 %5 == 0:
+        return "buzz"
+    else:
+        return "null"
 
 
     # <QUESTION 4>
@@ -110,8 +123,15 @@ def three(arg1):
     # help(int) for working with numbers and help(str) for working with Strings.
 
 def four(arg1):
-    pass
+    number_list = arg1.split()
+    sum_list = []
 
+    for number in number_list:
+        sum_digit = 0
+        for digit in number:
+            sum_digit += int(digit)
+        sum_list.append(sum_digit)
+    return max(sum_list)
 
     # <QUESTION 5>
 
