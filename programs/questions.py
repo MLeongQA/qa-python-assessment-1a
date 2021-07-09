@@ -180,8 +180,19 @@ def five(input):
     # Step through the logic here in order to solve the problem, you may find help(range) helpful.
 
 def six(input):
-    pass
-
+    string_list = list(input)
+    print(string_list)
+    print(len(string_list))
+    final_condition = True
+    index_count = 0
+    while index_count < len(string_list)-2:
+        if string_list[index_count] == "c" and string_list[index_count+1] == "i" and string_list[index_count+2] == "e":
+            final_condition = False
+        elif string_list[index_count] != "c" and string_list[index_count+1] == "e" and string_list[index_count+2] == "i":
+            final_condition = False
+        index_count += 1
+            
+    return final_condition
 
     # <QUESTION 7>
 
